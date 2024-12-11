@@ -5,57 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    
     
 
-
-<style>
-  .navbar-collapse{
-    justify-content: right;
-    margin-right: 40px;
-  
-  }
-  .navbar-nav{
-    gap: 20px;
-  }
-  /* .nav-item:before{
-    content: '';
-    height: 100px;
-    width: 100px;
-    background: red;
-  } */
-
-  .nav-item:before {
-    /* display: block; */
-    content: " ";
-    float: right;
-    width: 2px;
-    height: 25px;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 1px;
-    border-left-color: #4da4da;
-    margin-top: 5px;
-    margin-right: -10px;
-}
-
-  .bg-body-tertiary {
-   
-    background-color: rgb(239 237 243) !important;
-}
-.nav-item{
-  /* border-right: 1px solid #4da4da; */
-  font-weight: 700;
-}
-</style>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid" style=" padding-left: 50px;
-    padding-right: 50px;">
-          <a class="navbar-brand" href="#">
-<img src="public/image/Asset2 4.png" alt="" style="max-height: 80px;">
+    <link rel="stylesheet" href="public/css/style.css">
 
 
+
+  </head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg bg-nav-header navbar-light sticky-top p-0" style="top: 0px;">
+    <div class="container-fluid menu-container" >
+        <a href="/" class="navbar-brand d-flex align-items-center">
+            <img src="public/image/Asset24.png" alt="" style="max-height: 80px;">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end menu_offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <img src="public/image/Asset24.png" alt="" style="max-height: 80px;">
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ĐỐI TÁC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LiLi & LuLu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SẢN PHẨM MỚI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VIỆC LÀM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CSR</a>
+                    </li>
+                 
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#storeOffcanvas" aria-controls="storeOffcanvas">
+                            CỬA HÀNG
+                        </a>
+                    </li> -->
+
+                    <li class="nav-item dropdown d-none d-lg-block">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          CỬA HÀNG
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                  </li>
+
+                  <!-- Offcanvas Button for Mobile -->
+                  <li class="nav-item d-lg-none">
+                      <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#storeOffcanvas" aria-controls="storeOffcanvas">
+                          CỬA HÀNG
+                      </a>
+                  </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="public/image/icon-cart.png" alt=""></a>
+                    </li>
+                    <li class="nav-item-2">
+                        <a class="nav-link" href="#">E / <span style="color: #4da4da;">V</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+       
+      </div>
+    </div>
+</nav>
+
+
+
+<!-- Offcanvas cho CỬA HÀNG -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="storeOffcanvas" aria-labelledby="storeOffcanvasLabel">
+<div class="offcanvas-header">
+    <!-- Nút quay lại -->
+    <button type="button" class="btn btn-outline-secondary me-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="bi bi-arrow-left"></i> <!-- Hoặc đơn giản là "<" -->
+    </button>
+    <h5 class="offcanvas-title" id="storeOffcanvasLabel">CỬA HÀNG</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#">Action</a></li>
+        <li class="list-group-item"><a href="#">Another action</a></li>
+        <li class="list-group-item"><a href="#">Something else here</a></li>
+    </ul>
+</div>
+</div>
+<script>
+document.querySelector('#storeOffcanvas .btn-outline-secondary').addEventListener('click', function() {
+// Ví dụ: Mở lại offcanvas chính
+const mainOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasNavbar'));
+mainOffcanvas.show();
+});
+
+</script>
+
+
+
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" style=" padding-left: 50px;
+        padding-right: 50px;">
+              <a class="navbar-brand" href="#">
+        <img src="public/image/Asset24.png" alt="" style="max-height: 80px;">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,20 +140,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">ĐỐI TÁC</a>
               </li>
-
-            
               <li class="nav-item">
                 <a class="nav-link" href="#">   LiLi & LuLu</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#">   SẢN PHẨM MỚI</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#">   VIỆC LÀM</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#">   CSR</a>
               </li>
@@ -96,24 +163,489 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">   CSR</a>
+                <a class="nav-link" href="#">  <i class="bi bi-cart-plus"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">   CSR</a>
+              <li class="nav-item-2">
+                <a class="nav-link" href="#">   E / <span style="color: #4da4da;">V</span></a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
 
 
+      
       <div class="banner">
-        <!-- <div class="bg-banner"></div> -->
-        <div class=" position-relative">
-           <img src="public/image/banner3.jpg" width="100%" alt="">
+       
+        <div class="position-relative">
+           <img src="public/image/banner3.jpg"  alt="">
+         
         </div>
+
+      
+      </div>
+
+     <div class="container-lg">
+      <div class="wspace" style="padding: 20px;">
+
+      </div>
+     
+      <div class="position-relative2">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="postion-rela-img">
+              <img src="public/image/img-doitac.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+          <div class="img-top-partner">
+            <div class="row">
+              <div class="col-md-6"><a href="#"><img src="public/image/coop-mart.png" alt=""></a></div>
+              <div class="col-md-6"><a href="#"><img src="public/image/eon.png" alt=""></a></div>
+              <div class="col-md-6"><a href="#"><img src="public/image/concung.png" alt=""></a></div>
+              <div class="col-md-6"><a href="#"><img src="public/image/lotte-mart.png" alt=""></a></div>
+            </div>
+
+            <div class="text-partner">
+              Từ một đơn vị chuyên phân phối các sản phẩm đồ chơi cho trẻ em, hiểu được nhu cầu của thị trường cũng như những trăn trở của các bậc phụ huynh khi lựa chọn đồ chơi cho con mình. Long Thủy –LT ra đời với mong muốn mang đến những món đồ chơi “made in Vietnam” thực sự an toàn cho sức khỏe trẻ em.
+            </div>
+            
+          </div>
+          
+          </div>
+        </div>
+
+
+        
+      
+      </div>
+
+    
+
+     
+    
+
+     
+
+     
+
     </div>
 
+    <div class="container-md">
+      <div class="product-item">
+
+        <div class="row">
+          <div class="col-6"><img src="public/image/product1.png" alt=""></div>
+          <div class="col-6">
+            <div class="space-product">
+
+            </div>
+            <div class="title-product-item">
+              Hoàng tử rồng tốt bụng!
+            </div>
+            <div class="descript-product">Giới thiệu: LuLu, trái tim rồng nhân hậu và trí tuệ thông minh
+              Búp bê nhân vật độc đáo này được phát triển bởi latoys vietnam, 
+              mang lại khả năng cho trí tưởng tượng của trẻ em.
+              <br>
+             
+              Hoàng tử nhiều biến hóa: LuLu sở hữu một khả năng phi thường để
+              thay đổi diện mạo của mình, biến thành nhiều loại <br>
+              nhân vật. Anh ấy không chỉ là một nhà khoa học tài giỏi hay một 
+              phi hành gia dũng cảm-anh ấy có thể trở thành bất kỳ nhân vật 
+              nào bạn mơ ước!
+              <br>
+             
+              Trái tim hiền lành, tinh thần chiến binh: LuLu là một hoàng tử 
+              đích thực, tốt bụng và xa cách sẵn sàng giúp đỡ người khác. 
+              Tuy nhiên, bên dưới bản chất hiền lành của anh ấy là sự hung dữ tinh 
+              thần của con rồng cuối cùng. Khi nguy hiểm ập đến, lulu trở thành 
+              chiến binh đáng sợ, cầm tia sét và một huyền thoại tấm khiên được 
+              rèn bằng ánh nắng mặt trời để bảo vệ lẽ phải.
+            </div>
+            <ul id="info-product">
+              <li> <img src="public/image/icon1.png" alt=""></li>
+              <li> <img src="public/image/icon2.png" alt=""></li>
+              <li> <img src="public/image/icon3.png" alt=""></li>
+              <li> <img src="public/image/icon4.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+     </div>
+
+      <div class="product-item">
+
+        <div class="row">
+        
+          <div class="col-6">
+            <div class="title-product-item">
+              Người đẹp hiếm có trái tim rồng
+            </div>
+            <div class="descript-product">Người đẹp hiếm có trái tim rồng
+
+              Giới thiệu: LiLi, công chúa rồng biến hình! độc đáo này được 
+              phát triển bởi LAtoys of vietnam, cung cấp vô số khả năng 
+              chơi tưởng tượng.
+              <br><br>
+              Rồng biến hình: LiLi có thể thay đổi sừng của mình cho dễ 
+              thương hoặc vẻ ngoài dữ dằn và thậm chí còn thay đổi màu tóc 
+              để tạo ra những phong cách mới đầy hoang dã!
+              <br><br>
+              Nhiều vai trò: Cho LiLi mặc áo khoác của bác sĩ hoặc y tá hình 
+              dạng thống nhất để nuôi dưỡng những cuộc phiêu lưu, biến cô 
+              thành một vương giả công chúa với bộ váy bồng bềnh và vương 
+              miện lấp lánh. Nhưng đừng như vậy bị lừa-công chúa này cũng có 
+              tinh thần của một chiến binh! trang bị cho cô ấy bộ áo giáp và 
+              trao cho cô ấy một thanh kiếm để trở thành một người 
+              bảo vệ dũng mãnh!
+              <br><br>
+              Mạnh mẽ và ngọt ngào: LiLi là sự pha trộn hoàn hảo của sự dịu 
+              dàng và sức mạnh. Cô ấy có thể là một bác sĩ tận tình hay một 
+              nàng công chúa xinh đẹp, nhưng tinh thần rồng hung dữ của cô 
+              ấy khiến cô ấy trở thành một thế lực đáng nể. Với LiLi, cô gái 
+              có thể khám phá mọi khía cạnh trong tính cách của mình.
+            </div>
+              <ul id="info-product">
+                <li> <img src="public/image/icon1.png" alt=""></li>
+                <li> <img src="public/image/icon2.png" alt=""></li>
+                <li> <img src="public/image/icon3.png" alt=""></li>
+                <li> <img src="public/image/icon4.png" alt=""></li>
+              </ul>
+          </div>
+
+          <div class="col-6"><img src="public/image/product2.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="all-product">
+        <div class="product-all-img">
+          <img src="public/image/product-banner.png" alt="">
+          <button><a href="">TẤT CẢ SẢN PHẨM</a></button>
+        </div>
+       
+      </div>
+    </div>
+    <div class="container-fluid">
+
+      <div class="contact-fomr">
+        <div class="row">
+          <div class="col-md-6">
+          <img src="public/image/image_contact.png" alt="">
+          </div>
+          <div class="col-md-6">
+            
+        <div class="form-sp">
+          <div class="row">
+            <div class="col-md-5">
+  
+              <div class="wage">
+                <ul>
+                  <li><img src="public/image/icon-luong.png" alt=""></li>
+                  <li><label>Lương</label> </li>
+                </ul>
+                <input type="text" name="" id="">
+              </div>
+  
+  
+              <div class="wage">
+                <ul>
+                  <li><img src="public/image/icon-work.png" alt=""></li>
+                  <li><label>Công việc</label> </li>
+                </ul>
+                <input type="text" name="" id="">
+              </div>
+  
+              <div class="wage">
+                <ul>
+                  <li><img src="public/image/icon-chucvu.png" alt=""></li>
+                  <li><label>Chức vụ</label> </li>
+                </ul>
+                <input type="text" name="" id="">
+              </div>
+  
+  
+  
+            </div>
+            <div class="col-md-5">
+  
+              <div class="wage">
+                <ul>
+                  <li><img src="public/image/icon-map.png" alt=""></li>
+                  <li> <label>Nơi làm việc</label> </li>
+                </ul>
+                <input type="text" name="" id="">
+              </div>
+             
+  
+  
+              <div class="wage">
+                <ul>
+                  <li><img src="public/image/icon-date.png" alt=""></li>
+                  <li><label>Hạn nộp hồ sơ</label> </li>
+                </ul>
+                <input type="text" name="" id="">
+              </div>
+  
+              <div class="wage">
+                <ul>
+                  <li><img src="public/image/icon-language.png" alt=""></li>
+                  <li> <label>Ngôn ngữ </label> </li>
+                </ul>
+                <input type="text" name="" id="">
+              </div>
+            </div>
+  
+          
+          </div>
+          <div class="row">
+            <div class="col-md-9">
+              <div class="sub-contact">
+                <ul>
+                  <li><img src="public/image/icon-contact.png" alt=""></li>
+                  <li> <button type="submit" id="sub-contact">Ứng Tuyển</button></li>
+                </ul>
+               
+              </div>
+
+              <div class="icon-page">
+                <ul>
+                 <li><img src="public/image/icon-fb.png" alt=""></li>
+                 <li><img src="public/image/icon-twite.png" alt=""></li>
+                 <li><img src="public/image/icon-mail.png" alt=""></li>
+                 <li><img src="public/image/icon-ytb.png" alt=""></li>
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+       
+        
+
+        
+     
+           
+
+         
+
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-img">
+        <div class="row">
+          <div class="col-md-5"><img src="public/image/image-csr.png" alt=""></div>
+          <div class="col-md-7">
+
+
+          <div class="slider-scr">
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="public/image/slider1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="public/image/slider1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="public/image/slider1.png" alt=""></div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+          
+             
+            </div>
+          </div>
+
+          <div class="content-slider">
+            Bên cạnh giá trị giáo dục là phát huy khả năng phát triển tư duy một cách tự nhiên. Công ty TNHH Long Thủy L-T còn tạo điểm nhấn khác biệt cho các dòng sản phẩm của mình. Không chỉ chú trọng nâng cao trí tuệ cho trẻ bằng những sản phẩm ngộ nghĩnh kích thích khả năng sáng tạo, các dòng sản phẩm của Công ty Long Thủy L-T còn được chăm chút kỹ lưỡng để phát triển cảm xúc và tinh thần của trẻ. Đó chính là sự phát triển toàn diện cho bé theo đúng phương châm “Chơi vui, học thông minh” của Công ty TNHH Long Thủy L-T.
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            <!-- Footer -->
+      <footer class="text-center text-lg-start bg-body-tertiary">
+       
+       
+        <section class="">
+          <div class="container text-center text-md-start p-0 mt-6">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 p-0 mb-4">
+               <img src="public/image/logo-footer.png" alt="">
+               
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 p-0 mb-4">
+                <div class="about-footer">
+                  LAToys là thương hiệu đồ chơi trẻ em uy tín được sản xuất tại Việt Nam. Chúng tôi cam kết mọi sản phẩm đều đạt tiêu chuẩn chất lượng đồ chơi trẻ em như: ISO, Quacert, BSCI. LAToys luôn nỗ lực tạo ra những dòng sản phẩm đồ chơi trẻ em không chỉ giúp trẻ phát triển về thể chất mà còn cả trí tuệ. LAToys sẽ là người bạn đồng hành đáng tin cậy trên hành trình trưởng thành của con bạn.
+                </div>
+                <div class="icon-page-footer">
+                  <ul>
+                   <li><img src="public/image/icon-fb.png" alt=""></li>
+                   <li><img src="public/image/icon-twite.png" alt=""></li>
+                   <li><img src="public/image/icon-mail.png" alt=""></li>
+                   <li><img src="public/image/icon-ytb.png" alt=""></li>
+                  </ul>
+                 
+                </div>
+              
+               
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
+              <div class="info-footer">
+                <ul>
+                  <li>
+                    <div class="ul-info-footer">
+                    <ul>
+                      <li> <img src="public/image/icon-address.png" alt=""></li>
+                      <li> 
+                        <div class="text-address">
+                            Địa chỉ
+                            <br>
+                            968Đ, Ấp Cầu Tràm, Huyện Cần Đước, 
+                            Tỉnh Long An
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                   
+                  </li>
+                  <li>
+                    <div class="ul-info-footer">
+                    <ul>
+                      <li> <img src="public/image/icon-call.png" alt=""></li>
+                      <li> 
+                        <div class="text-address">
+                          Đường dây nóng
+                          <br>
+                          0937.309.930 // 0913.003.973
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                  </li>
+                  <li>
+                    <div class="ul-info-footer">
+                    <ul>
+                      <li> <img src="public/image/icon-maill.png" alt=""></li>
+                      <li> 
+                        <div class="text-address">
+                          Email
+                          <br>
+                            info@longthuy.vn
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                  </li>
+                  <li>
+                    <div class="ul-info-footer">
+                    <ul>
+                      <li> <img src="public/image/icon-chat.png" alt=""></li>
+                      <li> 
+                        <div class="text-address">
+                          Trò chuyện
+                          <br>
+                          Facebook messenger
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                  </li>
+                  <li>
+                    <div class="ul-info-footer">
+                    <ul>
+                      <li> <img src="public/image/icon-dichvu.png" alt=""></li>
+                      <li> 
+                        <div class="text-address">
+                          Hỗ trợ
+                          <br>
+                          Dịch vụ chăm sóc khách hàng
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 p-0 mb-md-0 mb-4">
+               <div class="row">
+                <div class="col-md-6 mt-4">
+                  <img src="public/image/icon1.png" alt="">
+                </div>
+                <div class="col-md-6 mt-4">
+                  <img src="public/image/icon2.png" alt="">
+                </div>
+                <div class="col-md-6 mt-4">
+                  <img src="public/image/icon3.png" alt="">
+                </div>
+                <div class="col-md-6 mt-4">
+                  <img src="public/image/icon4.png" alt="">
+                </div>
+              
+               </div>
+               
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+    
+     
+
+     
+      </footer>
+      <!-- Footer -->
+
+     
+     <div class="banner-footer">
+      <img src="public/image/banner-footer.png" alt="">
+      
+      <div class="text-footer">
+      
+        LONG THUY TOYS  
+
+        <span class="border border-dark rounded-circle d-inline-flex justify-content-center align-items-center" 
+              style="width: 20px; height: 20px; font-size: 20px; font-weight: bold;">
+            C
+        </span>
+        2018 | Đồ chơi trẻ em Việt Nam
+      </div>
+              </div>
+
+
+
+     
+
+
+
+
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+      <script src="public/js/script.js"></script>
+  
+
+     
 </body>
 </html>
