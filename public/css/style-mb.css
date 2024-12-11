@@ -2,13 +2,34 @@
 
 
 @media (max-width: 767px) {
-    .position-relative > img{
+    /* .position-relative > img{
      max-width: 100%;
      object-fit: cover;
      width: max-content;
      height: 500px;
-    }
+    } */
   
+    .container-fluid{
+        padding-right: calc(var(--bs-gutter-x)* .5);
+        padding-left: calc(var(--bs-gutter-x)* .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .wage ul li:last-child {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .wage ul li {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .wage input{
+        width: 100%;
+    }
+    .sub-contact {
+        margin-top: 40px;
+       
+    }
     .menu-container{
      padding-left: 10px;
            padding-right: 10px;
@@ -37,5 +58,8 @@
 }
 .about-footer{
     text-align: left;
+}
+.product-all-img >img{
+    width: auto;
 }
   }
