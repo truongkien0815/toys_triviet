@@ -20,5 +20,22 @@
    .sub-contact{
     display: block;
    }
-  
+   footer .col-md-3 {
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+}
+
+.info-footer ul{
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+}
+.icon-page-footer ul li:first-child{
+    margin: auto;
+}
+.ul-info-footer ul li{
+    text-align: left;
+}
+.about-footer{
+    text-align: left;
+}
   }

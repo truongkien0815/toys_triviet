@@ -385,7 +385,7 @@ footer{
   font-size: 12px;
 }
 .ul-info-footer ul{
-  display: flex;
+  display: -webkit-box;
 }
 .ul-info-footer ul li{
   margin: 5px;
