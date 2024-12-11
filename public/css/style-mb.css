@@ -1,0 +1,24 @@
+
+
+
+@media (max-width: 767px) {
+    .position-relative > img{
+     max-width: 100%;
+     object-fit: cover;
+     width: max-content;
+     height: 500px;
+    }
+  
+    .menu-container{
+     padding-left: 10px;
+           padding-right: 10px;
+   }
+
+   .img-top-partner{
+    position: unset;
+   }
+   .sub-contact{
+    display: block;
+   }
+  
+  }
